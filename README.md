@@ -1,8 +1,3 @@
-Here's your full, professional **`README.md` file** including the **architecture diagram**, **welcome page**, **tenant dashboard**, and **owner dashboard** screenshots. It is structured for GitHub and can be directly copy-pasted into your repo.
-
----
-
-```markdown
 # 🏢 UnitFix — Cloud-Based Apartment Complaint Management System
 
 UnitFix is a secure and scalable serverless web application that enables **tenants** to raise complaints and **owners** to manage units, view issues, and schedule repairs — all on AWS.
