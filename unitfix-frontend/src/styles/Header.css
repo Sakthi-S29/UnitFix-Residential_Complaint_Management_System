@@ -1,0 +1,24 @@
+/* src/styles/Header.css */
+.app-header {
+  background: #1e1e2f;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00e8d0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.brand-title:hover {
+  color: #00c3ff;
+}

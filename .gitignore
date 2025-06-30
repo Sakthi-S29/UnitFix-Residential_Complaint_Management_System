@@ -1,0 +1,48 @@
+# General
+.DS_Store
+*.log
+*.bak
+*.tmp
+*.swp
+.env
+.env.local
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.crash/
+*.backup
+*.override.tf
+*.override.tf.json
+terraform.tfvars
+override.tf
+override.tf.json
+
+# AWS CLI credentials
+.aws/
+credentials
+
+# Lambda build artifacts
+*.zip
+__pycache__/
+*.py[cod]
+
+# React / Frontend
+node_modules/
+build/
+dist/
+.vite/
+coverage/
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.code-workspace
+
+# OS generated
+Thumbs.db
+ehthumbs.db
+Icon?
+
+terraform/aws_cli.sh

@@ -1,0 +1,262 @@
+/* === Section Container === */
+.section-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: calc(100vh - 120px);
+}
+
+/* === Section Title === */
+.section-container h2 {
+  color: #1a1a2e;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 32px 0;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #1a1a2e;
+  display: flex;
+  align-items: center;
+}
+
+.section-container h2::before {
+  content: '🔧';
+  margin-right: 8px;
+  font-size: 28px;
+}
+
+/* === Loading and Empty States === */
+.section-container p {
+  color: #333;
+  font-size: 16px;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* === Scheduled Repair List === */
+.scheduled-repair-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* === Scheduled Repair Item === */
+.scheduled-repair-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 24px;
+  transition: all 0.2s ease;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scheduled-repair-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-color: #1a1a2e;
+  transform: translateY(-2px);
+}
+
+/* === Repair Item Content === */
+.scheduled-repair-item strong {
+  color: #1a1a2e;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.scheduled-repair-item span {
+  color: #333;
+  font-size: 14px;
+  font-weight: normal;
+  display: block;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.scheduled-repair-item span:last-child {
+  margin-bottom: 0;
+}
+
+/* === Status Badge Styling === */
+.scheduled-repair-item span:nth-child(4) {
+  position: relative;
+  padding-left: 20px;
+}
+
+.scheduled-repair-item span:nth-child(4)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #1a1a2e;
+}
+
+/* === Technician and Notes Styling === */
+.scheduled-repair-item span:nth-child(5) {
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+.scheduled-repair-item span:nth-child(6) {
+  color: #666;
+  font-style: italic;
+  background-color: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border-left: 3px solid #1a1a2e;
+  margin-top: 8px;
+}
+
+/* === Unit and Tenant Info === */
+.scheduled-repair-item strong::after {
+  content: attr(data-unit);
+  font-weight: normal;
+  color: #666;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+/* === Date and Time Highlight === */
+.scheduled-repair-item span:nth-child(3) {
+  background-color: #1a1a2e;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .section-container {
+    margin: 20px;
+    padding: 32px 24px;
+    min-height: auto;
+  }
+  
+  .section-container h2 {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .section-container h2::before {
+    font-size: 24px;
+  }
+  
+  .scheduled-repair-list {
+    gap: 16px;
+  }
+  
+  .scheduled-repair-item {
+    padding: 20px;
+  }
+  
+  .scheduled-repair-item strong {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .scheduled-repair-item span {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  
+  .scheduled-repair-item span:nth-child(3) {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-container {
+    margin: 10px;
+    padding: 24px 20px;
+  }
+  
+  .section-container h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .scheduled-repair-item {
+    padding: 16px;
+  }
+  
+  .scheduled-repair-item strong {
+    font-size: 15px;
+  }
+  
+  .scheduled-repair-item span {
+    font-size: 12px;
+  }
+  
+  .section-container p {
+    padding: 30px 15px;
+    font-size: 14px;
+  }
+}
+
+/* === Focus and Accessibility === */
+.scheduled-repair-item:focus {
+  outline: 2px solid #1a1a2e;
+  outline-offset: 2px;
+}
+
+/* === Animation for List Items === */
+.scheduled-repair-item {
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Loading State Enhancement === */
+.section-container p:first-of-type {
+  position: relative;
+}
+
+.section-container p:first-of-type::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  border: 2px solid #1a1a2e;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,18 @@
+.tenant-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.tenant-dashboard-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.tenant-dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f7f9fc;
+  overflow-y: auto;
+}

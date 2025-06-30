@@ -1,0 +1,47 @@
+.add-tenant-container {
+  padding: 2rem;
+  max-width: 600px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #999;
+  margin-bottom: 1.5rem;
+}
+
+.add-tenant-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.gradient-btn {
+  padding: 0.75rem;
+  background: linear-gradient(to right, #00e8d0, #007CF0);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.success-text {
+  margin-top: 1rem;
+  color: green;
+}
+
+.error-text {
+  margin-top: 1rem;
+  color: red;
+}

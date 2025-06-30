@@ -1,0 +1,55 @@
+/* === Admin Dashboard Layout === */
+.admin-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f4f6f8;
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-dashboard-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.admin-dashboard-content {
+  flex: 1;
+  padding: 2rem 3rem;
+  overflow-y: auto;
+  background-color: #f9fbfd;
+}
+
+/* === Status Badges === */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 10px;
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.badge-open {
+  background-color: #1e90ff;
+  color: white;
+}
+
+.badge-warning {
+  background-color: #ffd43b;
+  color: #333;
+}
+
+.badge-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-danger {
+  background-color: #e03131;
+  color: white;
+}

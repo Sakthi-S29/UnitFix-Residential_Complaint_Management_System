@@ -1,0 +1,191 @@
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;          /* ✅ Vertically center the form */
+  padding: 60px 20px;           /* ✅ Keeps breathing room on small screens */
+  min-height: 100vh;            /* ✅ Ensures it fills full screen */
+  box-sizing: border-box;
+  overflow-y: auto;             /* ✅ Allows scrolling if needed */
+}
+
+.register-box {
+  background: #1e1e2f;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: #f5f5f5;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;             /* ✅ Improves readability of labels/inputs */
+}
+
+
+.register-box h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #00e8d0;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+}
+
+.register-form input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background: #f5f5f5;
+  color: #111;
+}
+
+.gradient-btn {
+  background: linear-gradient(to right, #00c3ff, #005bea);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.gradient-btn:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+.login-link {
+  margin-top: 1.2rem;
+  color: #ccc;
+}
+
+.login-link a {
+  color: #00c3ff;
+  text-decoration: underline;
+}
+.field-wrapper {
+  margin-bottom: 1rem;
+}
+
+/* Form Field Labels */
+.field-label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  color: #cccccc;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+
+/* Subtitle under the form title */
+.form-subtitle {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.hint-text {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.error-text {
+  color: #f87171; /* red-400 */
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.field-wrapper {
+  margin-bottom: 1.25rem;
+}
+
+.field-label {
+  display: block;
+  font-weight: 500;
+  color: #ccc;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.error-text {
+  color: #f87171;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 0.3rem;
+}
+
+.forgot-password a {
+  font-size: 0.85rem;
+  color: #00e8d0;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.auth-page {
+  height: 100vh;
+  overflow: hidden; /* ⛔ disables scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9f7f2;
+}
+
+
+.auth-page .register-box {
+  margin: auto;
+}
+
+.tenant-signup-form label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #dbeafe;
+  text-align: left;
+}
+
+.tenant-signup-form .form-input,
+.tenant-signup-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.95rem;
+  background: #f8fafc;
+  color: #111;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.tenant-signup-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='gray' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5.5L8 12l6.5-6.5H1.5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px;
+}
+
+.tenant-signup-form input:focus,
+.tenant-signup-form select:focus {
+  outline: 2px solid #00e8d0;
+}

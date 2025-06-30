@@ -1,0 +1,135 @@
+/* === Scheduled Repairs Container === */
+.scheduled-repairs-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.scheduled-repairs-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+/* === Loading and Empty State Messages === */
+.scheduled-repairs-container > p {
+  text-align: center;
+  font-size: 18px;
+  color: #6c757d;
+  padding: 40px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* === Repairs List Container === */
+.repairs-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* === Individual Repair Card === */
+.repair-card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #1a1a2e;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.repair-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* === Repair Card Title === */
+.repair-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+/* === Repair Card Content === */
+.repair-card p {
+  margin-bottom: 12px;
+  color: #333;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.repair-card p:last-child {
+  margin-bottom: 0;
+}
+
+.repair-card p strong {
+  color: #1a1a2e;
+  font-weight: bold;
+  display: inline-block;
+  min-width: 90px;
+}
+
+/* === Special Styling for Reply Section === */
+.repair-card p:last-child {
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 16px;
+  border: 1px solid #e9ecef;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .scheduled-repairs-container {
+    padding: 16px;
+  }
+  
+  .scheduled-repairs-container h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .repairs-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .repair-card {
+    padding: 20px;
+  }
+  
+  .repair-card h3 {
+    font-size: 18px;
+  }
+  
+  .repair-card p {
+    font-size: 14px;
+  }
+  
+  .repair-card p strong {
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scheduled-repairs-container {
+    padding: 12px;
+  }
+  
+  .repair-card {
+    padding: 16px;
+  }
+  
+  .repair-card p strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+}

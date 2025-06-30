@@ -1,0 +1,19 @@
+.feature-section {
+  background: #fff;
+  padding: 2rem;
+}
+.feature-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.feature-card {
+  width: 200px;
+}
+.feature-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}

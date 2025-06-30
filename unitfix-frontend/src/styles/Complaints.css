@@ -1,0 +1,253 @@
+/* === Complaints Container === */
+.complaints-container {
+  display: flex;
+  height: calc(100vh - 60px); /* Account for admin header height */
+  background-color: #f8f9fa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* === Complaint List Section === */
+.complaint-list {
+  width: 40%;
+  min-width: 350px;
+  background-color: white;
+  border-right: 1px solid #e9ecef;
+  overflow-y: auto;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.complaint-list h2 {
+  background-color: #1a1a2e;
+  color: white;
+  margin: 0;
+  padding: 20px 24px;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+/* === Loading and Empty States === */
+.complaint-list p {
+  padding: 24px;
+  text-align: center;
+  color: #6c757d;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* === Complaint Card Styling === */
+.complaint-card {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e9ecef;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: white;
+  position: relative;
+}
+
+.complaint-card:hover {
+  background-color: #f8f9fa;
+  border-left: 4px solid #1a1a2e;
+}
+
+.complaint-card.active {
+  background-color: #1a1a2e;
+  color: white;
+  border-left: 4px solid #dc3545;
+}
+
+.complaint-card.active .complaint-meta small {
+  color: #e9ecef;
+}
+
+/* === Complaint Header === */
+.complaint-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.complaint-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: inherit;
+  flex: 1;
+  margin-right: 12px;
+  line-height: 1.4;
+}
+
+.complaint-header span {
+  background-color: #dc3545;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.complaint-card.active .complaint-header span {
+  background-color: white;
+  color: #1a1a2e;
+}
+
+/* === Complaint Content === */
+.complaint-card p {
+  margin: 0 0 12px 0;
+  color: #6c757d;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0;
+  text-align: left;
+}
+
+.complaint-card.active p {
+  color: #e9ecef;
+}
+
+/* === Complaint Meta Information === */
+.complaint-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.complaint-meta small {
+  color: #6c757d;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* === Complaint Details Section === */
+.complaint-details {
+  flex: 1;
+  background-color: white;
+  padding: 32px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.complaint-details h3 {
+  color: #1a1a2e;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.complaint-details p {
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.complaint-details p:last-child {
+  margin-bottom: 0;
+}
+
+.complaint-details strong {
+  color: #1a1a2e;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 80px;
+}
+
+/* === Empty State === */
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6c757d;
+  font-size: 18px;
+  text-align: center;
+}
+
+.empty-state p {
+  margin: 0;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 2px dashed #dee2e6;
+}
+
+/* === View Attachment Button === */
+.view-attachment-button {
+  background-color: #1a1a2e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  margin-left: 8px;
+}
+
+.view-attachment-button:hover {
+  background-color: #dc3545;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+.view-attachment-button:active {
+  transform: translateY(0);
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .complaints-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .complaint-list {
+    width: 100%;
+    min-width: auto;
+    max-height: 50vh;
+  }
+  
+  .complaint-details {
+    padding: 20px;
+  }
+  
+  .complaint-details h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .complaint-card {
+    padding: 16px 20px;
+  }
+  
+  .complaint-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .complaint-header span {
+    align-self: flex-end;
+  }
+  
+  .complaint-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .complaint-details {
+    padding: 16px;
+  }
+}

@@ -1,0 +1,74 @@
+/* === Admin Header Container === */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a2e;
+  color: white;
+  padding: 16px 32px;
+  position: relative;
+  z-index: 10;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* === Title/Logo Style === */
+.admin-title {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.admin-title span {
+  margin-right: 8px;
+}
+
+/* === Profile Icon Area === */
+.admin-profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.profile-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+}
+
+/* === Dropdown Menu Styling === */
+.dropdown-menu {
+  position: absolute;
+  top: 2.8rem;
+  right: 0;
+  background-color: white;
+  color: #333;
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu button:hover {
+  background-color: #dc3545;
+  color: white;
+}

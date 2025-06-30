@@ -1,0 +1,62 @@
+.admin-sidebar {
+  width: 220px;
+  background-color: #10152a;
+  height: calc(100vh - 60px); /* header height */
+  padding: 1rem;
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Sidebar Section Title */
+.sidebar-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ccc;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* Navigation Container */
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Nav Item Style */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  color: #ccc;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+/* Hover Style */
+.nav-item:hover {
+  background-color: #1f2b4a;
+  color: #00ffff;
+}
+
+/* Active Link Style */
+.nav-item.active {
+  background-color: #1e2a47;
+  border-left: 4px solid #00bcd4;
+  color: #00ffff;
+  font-weight: bold;
+}
+
+/* Icon and Label Styling */
+.nav-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.nav-label {
+  font-size: 0.95rem;
+}

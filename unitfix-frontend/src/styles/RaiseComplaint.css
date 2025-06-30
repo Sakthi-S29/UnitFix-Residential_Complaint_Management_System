@@ -1,0 +1,417 @@
+/* RaiseComplaint Container */
+.complaint-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.complaint-container h2 {
+  margin: 0 0 2rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.complaint-container h2::before {
+  content: '📝';
+  font-size: 2rem;
+}
+
+/* Form Container */
+.complaint-form {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Form Labels */
+.complaint-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  font-size: 1rem;
+  letter-spacing: 0.025em;
+}
+
+.complaint-form label:not(:first-of-type) {
+  margin-top: 1.5rem;
+}
+
+/* Input Fields */
+.complaint-form input[type="text"],
+.complaint-form select,
+.complaint-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: white;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.complaint-form input[type="text"]:focus,
+.complaint-form select:focus,
+.complaint-form textarea:focus {
+  outline: none;
+  border-color: #1a1a2e;
+  box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.1);
+}
+
+.complaint-form input[type="text"]:hover,
+.complaint-form select:hover,
+.complaint-form textarea:hover {
+  border-color: #9ca3af;
+}
+
+/* Select Dropdown */
+.complaint-form select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+  appearance: none;
+}
+
+.complaint-form select option {
+  padding: 8px;
+  color: #1a1a2e;
+}
+
+/* Textarea */
+.complaint-form textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+/* File Input */
+.complaint-form input[type="file"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px dashed #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.complaint-form input[type="file"]:hover {
+  border-color: #1a1a2e;
+  background: #f3f4f6;
+}
+
+.complaint-form input[type="file"]:focus {
+  outline: none;
+  border-color: #1a1a2e;
+  box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.1);
+}
+
+/* File input styling for webkit browsers */
+.complaint-form input[type="file"]::-webkit-file-upload-button {
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: background 0.2s ease;
+}
+
+.complaint-form input[type="file"]::-webkit-file-upload-button:hover {
+  background: #2d2d5a;
+}
+
+/* Checkbox Container */
+.complaint-form label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-weight: 500;
+  color: #4b5563;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.complaint-form label:has(input[type="checkbox"]):hover {
+  background: #f3f4f6;
+  border-color: #1a1a2e;
+}
+
+/* Checkbox Input */
+.complaint-form input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #1a1a2e;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Buttons */
+.form-actions button {
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Cancel Button */
+.form-actions button[type="button"] {
+  background: #f3f4f6;
+  color: #1a1a2e;
+  border: 2px solid #e5e7eb;
+}
+
+.form-actions button[type="button"]:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+  transform: translateY(-1px);
+}
+
+.form-actions button[type="button"]:active {
+  transform: translateY(0);
+}
+
+/* Submit Button */
+.form-actions button[type="submit"] {
+  background: #1a1a2e;
+  color: white;
+  border: 2px solid #1a1a2e;
+  position: relative;
+}
+
+.form-actions button[type="submit"]:hover:not(:disabled) {
+  background: #2d2d5a;
+  border-color: #2d2d5a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 26, 46, 0.3);
+}
+
+.form-actions button[type="submit"]:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Disabled Submit Button */
+.form-actions button[type="submit"]:disabled {
+  background: #9ca3af;
+  border-color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading State for Submit Button */
+.form-actions button[type="submit"]:disabled::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success/Error Messages */
+.complaint-form p {
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid;
+  animation: slideIn 0.3s ease-out;
+}
+
+.complaint-form p[style*="green"] {
+  background: #d1f7c4;
+  color: #059669;
+  border-color: #10b981;
+}
+
+.complaint-form p[style*="red"] {
+  background: #fecaca;
+  color: #dc2626;
+  border-color: #ef4444;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Required Field Indicator */
+.complaint-form label[for]:after {
+  content: ' *';
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* Form Section Grouping */
+.complaint-form > label:nth-of-type(1),
+.complaint-form > label:nth-of-type(3) {
+  position: relative;
+}
+
+.complaint-form > label:nth-of-type(1)::before {
+  content: '📋 Basic Information';
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  margin-top: -0.5rem;
+}
+
+.complaint-form > label:nth-of-type(3)::before {
+  content: '📝 Details';
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  margin-top: 1rem;
+}
+
+/* Input Validation States */
+.complaint-form input:invalid:not(:focus):not(:placeholder-shown),
+.complaint-form select:invalid:not(:focus),
+.complaint-form textarea:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.complaint-form input:valid:not(:focus):not(:placeholder-shown),
+.complaint-form select:valid:not(:focus),
+.complaint-form textarea:valid:not(:focus):not(:placeholder-shown) {
+  border-color: #10b981;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .complaint-container {
+    padding: 1rem;
+  }
+  
+  .complaint-container h2 {
+    font-size: 1.75rem;
+  }
+  
+  .complaint-form {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+  
+  .form-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .complaint-container h2 {
+    font-size: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .complaint-form {
+    padding: 1rem;
+  }
+  
+  .complaint-form > label:nth-of-type(1)::before,
+  .complaint-form > label:nth-of-type(3)::before {
+    font-size: 1rem;
+  }
+}
+
+/* Focus Management */
+.complaint-form *:focus {
+  scroll-margin-top: 100px;
+}
+
+/* Form Accessibility */
+.complaint-form input[aria-invalid="true"],
+.complaint-form select[aria-invalid="true"],
+.complaint-form textarea[aria-invalid="true"] {
+  border-color: #ef4444;
+}
+
+/* Print Styles */
+@media print {
+  .complaint-container {
+    background: white;
+    padding: 0;
+  }
+  
+  .complaint-form {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  .form-actions {
+    display: none;
+  }
+}
