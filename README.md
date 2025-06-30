@@ -33,7 +33,7 @@ Raise new complaints, track previous ones, and view repair schedules:
 
 ### 🧑‍💼 Owner Dashboard
 Manage units, tenants, view all complaints and schedule repairs:
-![Uploading Screenshot 2025-06-30 at 7.18.47 PM.png…]()
+<img width="1512" alt="Screenshot 2025-06-30 at 7 18 47 PM" src="https://github.com/user-attachments/assets/ae6b5dcc-d61b-4eab-83da-057ba5972ac0" />
 
 ---
 
