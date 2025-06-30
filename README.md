@@ -2,7 +2,7 @@
 
 UnitFix is a secure and scalable serverless web application that enables **tenants** to raise complaints and **owners** to manage units, view issues, and schedule repairs — all on AWS.
 
-![Architecture](images/architecture-diagram.png)
+![final_arch_unitfix_b01012281 drawio](https://github.com/user-attachments/assets/54f784f7-6114-4aa6-a81d-88a9983a0695)
 
 ---
 
