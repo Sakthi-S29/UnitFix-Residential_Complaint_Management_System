@@ -106,19 +106,6 @@ This script:
 
 ---
 
-## 🧪 Screenshots
-
-All relevant images should be placed in the `images/` folder:
-
-```
-images/
-├── architecture-diagram.png
-├── terraform-output.png
-├── cloudwatch-logs.png
-```
-
----
-
 ## 🧑‍💻 Author
 
 **Sakthi Sharan Mahadevan**
