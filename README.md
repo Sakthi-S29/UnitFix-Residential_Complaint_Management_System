@@ -1,21 +1,44 @@
-# 🛠️ UnitFix — Cloud-Based Apartment Complaint Management System
+Here's your full, professional **`README.md` file** including the **architecture diagram**, **welcome page**, **tenant dashboard**, and **owner dashboard** screenshots. It is structured for GitHub and can be directly copy-pasted into your repo.
 
-UnitFix is a modern, serverless web application that allows tenants to raise complaints and apartment owners to manage and schedule repairs. Built entirely on AWS using best practices in infrastructure, security, and scalability.
+---
+
+```markdown
+# 🏢 UnitFix — Cloud-Based Apartment Complaint Management System
+
+UnitFix is a secure and scalable serverless web application that enables **tenants** to raise complaints and **owners** to manage units, view issues, and schedule repairs — all on AWS.
 
 ![Architecture](images/architecture-diagram.png)
 
 ---
 
-## 🌟 Features
+## 🌐 Live App Features
 
-- 🔐 **Authentication** with AWS Cognito
-- 📤 **Complaint Filing** with file attachment via pre-signed URLs
-- 🛠️ **Repair Scheduling** and status tracking
-- 📦 **Serverless Backend** with AWS Lambda + API Gateway
-- 🗃️ **Data Storage** using DynamoDB (complaints, tenants, repairs)
-- 🌐 **React Frontend** hosted on Amazon S3
-- 📊 **Monitoring** via CloudWatch
-- ⚙️ **Fully automated deployment** using Terraform + Bash script
+- 🔐 User sign-up & login with **Cognito**
+- 🧾 File complaints with attachments (via **S3 pre-signed URLs**)
+- 🔧 Schedule and track repairs
+- 📊 View complaint history, filter by status
+- 🧑‍💼 Owner dashboard for unit & tenant management
+- ⚙️ Serverless backend + automated infrastructure using Terraform
+
+---
+
+## 🎬 Screenshots
+
+### ✅ Welcome Page
+A polished landing page with role-based login:
+<img width="1512" alt="Screenshot 2025-06-30 at 7 12 25 PM" src="https://github.com/user-attachments/assets/78c596ae-a3f0-4d4d-a57f-67cd93a5a3e0" />
+
+---
+
+### 🧍 Tenant Dashboard
+Raise new complaints, track previous ones, and view repair schedules:
+<img width="1512" alt="Screenshot 2025-06-30 at 7 13 13 PM" src="https://github.com/user-attachments/assets/6cdb1107-80bf-498a-aa8f-3864e089fec1" />
+
+---
+
+### 🧑‍💼 Owner Dashboard
+Manage units, tenants, view all complaints and schedule repairs:
+![Uploading Screenshot 2025-06-30 at 7.18.47 PM.png…]()
 
 ---
 
@@ -25,103 +48,100 @@ UnitFix is a modern, serverless web application that allows tenants to raise com
 
 UnitFix/
 ├── backend/
-│   └── lambda/                  # Python Lambda handlers
-├── terraform/                   # Infrastructure as Code
-├── unitfix-frontend/            # React frontend
-├── images/                      # Architecture & logs screenshots
-├── deploy\_unitfix.sh           # Deployment script
+│   └── lambda/                # Python Lambda handlers
+├── terraform/                 # Infrastructure-as-Code (IaC)
+├── unitfix-frontend/          # React frontend (Vite + Tailwind)
+├── images/                    # Screenshots used in README
+├── deploy\_unitfix.sh          # End-to-end deploy script
 └── README.md
 
 ````
 
 ---
 
-## 🚀 Quick Setup
+## 🚀 Quick Start
 
-### 📦 Prerequisites
+### 🧰 Prerequisites
 
-- AWS CLI (configured)
+- AWS CLI configured with Learner Lab / Free Tier
 - Terraform `>= 1.3`
-- Node.js + npm `>= 18`
+- Node.js `>= 18`
 - Python 3.12+
-- AWS Learner Lab account or AWS Free Tier account
+- Bash terminal
 
-### 🔧 One-Command Deployment
+### 🖥️ One-Line Deployment
 
 ```bash
 ./deploy_unitfix.sh
 ````
 
-This script:
+This automates:
 
-1. Zips all Lambda handlers in `backend/lambda/`
-2. Deploys infrastructure using Terraform in `terraform/`
-3. Builds frontend (`npm run build`) and uploads to S3
-
----
-
-## 🔐 Security
-
-* JWT-based route protection via **Cognito**
-* Pre-signed URLs for **secure file uploads**
-* IAM-scoped permissions via **LabRole**
-* Lambdas and DB run inside a **VPC** with private subnets and **NAT Gateway**
+1. Zipping all Lambda files in `backend/lambda`
+2. Running `terraform apply` to provision infra
+3. Running `npm run build` for frontend
+4. Uploading frontend to S3 bucket
 
 ---
 
-## 📊 Monitoring & IaC
+## 🔐 Security Highlights
 
-* All logs piped to **CloudWatch**
-* Alerting on Lambda errors and S3 triggers
-* **Terraform-managed** infrastructure:
-
-  * Lambdas, API Gateway, S3, DynamoDB, Cognito, VPC, EventBridge
-* Visual output after `terraform apply`:
-
-![Terraform Output](images/terraform-output.png)
+* 🛡️ JWT route protection using **AWS Cognito**
+* 🔏 Pre-signed S3 URLs for safe file uploads
+* 🔒 IAM Role-based access (LabRole)
+* 🌐 All sensitive resources inside a **VPC** with NAT + private subnets
 
 ---
 
-## 💰 Cost Summary (AWS Learner Lab)
+## ⚙️ Cloud Services Used
 
-| Service     | Cost                       |
-| ----------- | -------------------------- |
-| Lambda      | Free (<1M requests)        |
-| API Gateway | Negligible (<1K calls/day) |
-| DynamoDB    | On-demand (micro-cost)     |
-| S3          | Free (<1GB storage)        |
-| Cognito     | Free tier eligible         |
-
-> 💡 Estimated cost: **\$0** under AWS Learner Lab or Free Tier.
-
----
-
-## 📈 Future Enhancements
-
-* Staff dashboard with complaint filters
-* CI/CD via GitHub Actions
-* Notifications via SNS
-* Complaint status visualization
-* CloudFront + WAF
+| Category       | Services Used                                  |
+| -------------- | ---------------------------------------------- |
+| **Compute**    | AWS Lambda                                     |
+| **Storage**    | S3, DynamoDB                                   |
+| **Networking** | API Gateway, VPC, NAT Gateway, Security Groups |
+| **Auth**       | Cognito                                        |
+| **Monitoring** | CloudWatch                                     |
+| **IaC**        | Terraform                                      |
+| **Automation** | EventBridge + SNS                              |
 
 ---
 
-## 🧑‍💻 Author
+## 📦 Cost Estimation (AWS Learner Lab)
+
+| Service     | Cost Estimate          |
+| ----------- | ---------------------- |
+| Lambda      | Free (<1M reqs/month)  |
+| S3          | Free (<1GB)            |
+| DynamoDB    | Micro-cost (on-demand) |
+| API Gateway | Negligible (<1K/day)   |
+| Cognito     | Free Tier              |
+
+💡 Total estimated cost: **\$0–\$1**
+
+---
+
+## 🔧 Infrastructure as Code
+
+* Entire infra (Cognito, Lambdas, API Gateway, DynamoDB, VPC, etc.) is provisioned via **Terraform**
+* Lambda zipping, packaging, deployment handled via `deploy_unitfix.sh`
+* Frontend hosted on S3 with public access policy
+
+---
+
+## 🧠 Learning Outcomes
+
+* ✅ Applied the **AWS Well-Architected Framework**
+* ✅ Designed and deployed a **production-ready 3-tier cloud architecture**
+* ✅ Followed **security best practices** (JWT, least privilege IAM, VPC isolation)
+* ✅ Implemented **full CI/CD automation** with IaC and scripting
+
+---
+
+## 👤 Author
 
 **Sakthi Sharan Mahadevan**
 B01012281
-Dalhousie University — Summer 2025
-CSCI 5411 – Advanced Cloud Architecting
-
+Dalhousie University, Summer 2025
+*Course: CSCI 5411 – Advanced Cloud Architecting*
 ---
-
-## 📚 References
-
-* [AWS Serverless Best Practices](https://docs.aws.amazon.com/serverless/latest/application/serverless-best-practices.html)
-* [Terraform AWS Provider Docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
-* [AWS Cognito Docs](https://docs.aws.amazon.com/cognito/)
-* [Pre-signed URLs with S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/ShareObjectPreSignedURL.html)
-
----
-
-> ✨ This project is designed for cloud-native production readiness — fully automated, secure, scalable, and optimized.
